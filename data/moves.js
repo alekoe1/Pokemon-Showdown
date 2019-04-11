@@ -24,12 +24,33 @@ reflectable: Bounced back to the original user by Magic Coat or the Magic Bounce
 snatch: Can be stolen from the original user and instead used by another Pokemon using Snatch.
 sound: Has no effect on Pokemon with the Soundproof Ability.
 
+use 744 and onward for new move numbers
+
 */
 
 'use strict';
 
 /**@type {{[k: string]: MoveData}} */
 let BattleMovedex = {
+	"gulp": {
+		num: 743,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		desc: "The user gulps down the target, healing 1/2 the HP lost by the target, rounded half up. User always moves first.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+		id: "gulp",
+		name: "GULP",
+		pp: 50,
+		priority: 6,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "allAdjacent",
+		type: "Poison",
+		zMovePower: 500,
+		contestType: "Cool",
+	},
 	"10000000voltthunderbolt": {
 		num: 719,
 		accuracy: true,
